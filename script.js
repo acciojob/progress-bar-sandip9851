@@ -1,7 +1,7 @@
 //your JS code here. If required.
 const circle = document.querySelectorAll(".circle");
-const nxtBtn = document.querySelector("#nxt");
-const prvBtn = document.querySelector("#pre");
+const nxtBtn = document.querySelector("#next");
+const prvBtn = document.querySelector("#prev");
 
 nxtBtn.addEventListener("click",addclass);
 
