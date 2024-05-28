@@ -17,7 +17,7 @@ function addclass() {
   }
 	if (index > 0) {
     prvBtn.disabled = false;
-	circle[index].classList.remove("active");
+	
   }
 	
 }
