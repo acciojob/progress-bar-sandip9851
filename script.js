@@ -1,38 +1,33 @@
-//your JS code here. If required.
 const circle = document.querySelectorAll(".circle");
 const nxtBtn = document.querySelector("#next");
 const prvBtn = document.querySelector("#prev");
 
-nxtBtn.addEventListener("click",addclass);
+nxtBtn.addEventListener("click", addClass);
+prvBtn.addEventListener("click", removeClass);
 
-let index = 0;
-function addclass() {
-	//nxtBtn.preventDefault();
-	if (index < circle.length) {
+let index = 1;
+function addClass() {
+  if (index < circle.length) {
     circle[index].classList.add("active");
     index++;
   }
-	if (index === circle.length) {
+
+  prvBtn.disabled = false;
+
+  if (index === circle.length) {
     nxtBtn.disabled = true;
   }
-	if (index > 0) {
-    prvBtn.disabled = false;
-	
-  }
-	
 }
-prvBtn.addEventListener("click",removeClass);
+
 function removeClass() {
-	//prvBtn.preventDefault();
-	if (index > 0) {
+  if (index > 0) {
     index--;
     circle[index].classList.remove("active");
   }
-	if (index === 0) {
+
+  nxtBtn.disabled = false;
+
+  if (index === 0) {
     prvBtn.disabled = true;
   }
-	if (index < circle.length) {
-    nxtBtn.disabled = false;
-  }
-	
 }
